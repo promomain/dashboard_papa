@@ -108,5 +108,54 @@
   
   .btn-search, .btn-logout {
     font-size: 1.3rem;
+    padding: 8px;
+  }
+}
+
+/* Optimizaciones para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 0;
+  }
+  
+  .header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .legend {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .user-actions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  
+  .user-info {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .btn-search, .btn-logout {
+    font-size: 1.2rem;
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 } 

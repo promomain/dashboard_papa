@@ -62,4 +62,68 @@
   border-radius: 5px;
   font-size: 1.1rem;
   text-align: right;
+}
+
+/* Mejoras para móviles */
+@media (max-width: 768px) {
+  .entrenamiento-form {
+    padding: 15px;
+  }
+  
+  .form-group label {
+    font-size: 15px;
+  }
+  
+  .form-actions {
+    margin-top: 15px;
+  }
+  
+  .form-actions button {
+    min-width: auto;
+    flex: 1;
+  }
+  
+  .arriendo-section {
+    padding: 12px;
+    margin: 12px 0;
+  }
+  
+  .precio-total {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .entrenamiento-form {
+    padding: 12px;
+  }
+  
+  .entrenamiento-form h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-group.checkbox {
+    margin-left: 0;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-actions button {
+    width: 100%;
+    padding: 12px;
+  }
+  
+  .arriendo-section {
+    padding: 10px;
+    margin: 10px 0;
+  }
 } 

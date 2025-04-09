@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Calendar from 'react-calendar'
+import type { CalendarProps } from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
@@ -113,10 +114,10 @@ function App() {
     return () => unsubscribe();
   }, [user]);
 
-  const handleDateChange = (date: Date | Date[]) => {
-    if (Array.isArray(date)) return;
+  const handleDateChange: CalendarProps['onChange'] = (value) => {
+    if (value === null || Array.isArray(value)) return;
     
-    setSelectedDate(date);
+    setSelectedDate(value);
     setSelectedEntrenamiento(null);
     if (isMobile) {
       setShowCalendar(false);
@@ -237,7 +238,16 @@ function App() {
                 <button className="btn-toggle-calendar" onClick={handleToggleCalendar}>
                   {showCalendar ? 'Ocultar Calendario' : 'Mostrar Calendario'}
                 </button>
-                <button className="btn-primary add-btn-mobile" onClick={() => setShowForm(true)}>
+                <button 
+                  className="btn-primary add-btn-mobile" 
+                  onClick={() => {
+                    setShowForm(true);
+                    // En móvil, ocultar calendario al añadir entrenamiento
+                    if (isMobile && showCalendar) {
+                      setShowCalendar(false);
+                    }
+                  }}
+                >
                   Añadir
                 </button>
               </div>
@@ -250,6 +260,7 @@ function App() {
                   value={selectedDate}
                   locale="es-ES"
                   tileContent={tileContent}
+                  className={isMobile ? 'calendar-mobile' : ''}
                 />
                 {!isMobile && (
                   <button 
@@ -264,7 +275,14 @@ function App() {
             
             <div className="main-content">
               <h2>
-                Entrenamientos: {format(selectedDate, 'PPPP', { locale: es })}
+                {isMobile ? (
+                  <>
+                    <span className="date-display">{format(selectedDate, 'dd/MM/yyyy', { locale: es })}</span>
+                    <span className="date-name">{format(selectedDate, 'EEEE', { locale: es })}</span>
+                  </>
+                ) : (
+                  format(selectedDate, 'PPPP', { locale: es })
+                )}
               </h2>
               
               {showForm ? (

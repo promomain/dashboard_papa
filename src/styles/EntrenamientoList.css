@@ -85,4 +85,96 @@
   text-align: center;
   padding: 40px 0;
   color: #888;
+}
+
+/* Mejoras para móviles */
+@media (max-width: 768px) {
+  .entrenamiento-list th,
+  .entrenamiento-list td {
+    padding: 10px 6px;
+    font-size: 14px;
+  }
+  
+  .entrenamiento-list .status {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+  
+  .btn-action {
+    font-size: 1.1rem;
+    padding: 8px;
+  }
+  
+  .actions {
+    gap: 4px;
+  }
+  
+  .empty-state {
+    padding: 20px 0;
+  }
+}
+
+/* Para pantallas muy pequeñas, usamos un diseño de tarjetas en lugar de tabla */
+@media (max-width: 480px) {
+  .entrenamiento-list table {
+    display: block;
+  }
+  
+  .entrenamiento-list thead {
+    display: none; /* Ocultar cabeceras en pantallas muy pequeñas */
+  }
+  
+  .entrenamiento-list tbody {
+    display: block;
+    width: 100%;
+  }
+  
+  .entrenamiento-list tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background-color: #fff;
+  }
+  
+  .entrenamiento-list td {
+    flex: 1 0 50%;
+    border: none;
+    padding: 6px;
+    position: relative;
+  }
+  
+  .entrenamiento-list td:nth-child(1)::before {
+    content: "Tipo: ";
+    font-weight: bold;
+  }
+  
+  .entrenamiento-list td:nth-child(2)::before {
+    content: "Duración: ";
+    font-weight: bold;
+  }
+  
+  .entrenamiento-list td:nth-child(3)::before {
+    content: "Precio: ";
+    font-weight: bold;
+  }
+  
+  .entrenamiento-list td:nth-child(4)::before {
+    content: "Estado: ";
+    font-weight: bold;
+  }
+  
+  .entrenamiento-list td.actions {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    gap: 20px;
+  }
+  
+  .entrenamiento-list td.precio {
+    text-align: left;
+  }
 } 
