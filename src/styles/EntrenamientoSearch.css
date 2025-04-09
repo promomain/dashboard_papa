@@ -1,0 +1,346 @@
+.entrenamiento-search {
+  padding: 15px;
+  background-color: white;
+  border-radius: var(--border-radius);
+}
+
+.entrenamiento-search h3 {
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+.entrenamiento-search h4 {
+  margin: 25px 0 15px;
+  color: var(--dark-color);
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.btn-secondary {
+  background-color: #f1f1f1;
+  color: var(--dark-color);
+}
+
+/* Resumen de resultados */
+.result-summary {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.summary-card {
+  flex: 1;
+  text-align: center;
+  padding: 15px 10px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.summary-card.paid {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: var(--secondary-color);
+}
+
+.summary-card.pending {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: var(--danger-color);
+}
+
+.summary-title {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.summary-subtitle {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.hours-summary {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.money-summary {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  font-weight: 500;
+}
+
+.money-summary div:last-child {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.money-summary div:nth-child(2) {
+  color: #27ae60;
+}
+
+/* Lista de resultados */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result-item {
+  padding: 15px;
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  border-left: 4px solid transparent;
+}
+
+.result-item.paid {
+  border-left-color: var(--secondary-color);
+}
+
+.result-item.pending {
+  border-left-color: var(--danger-color);
+}
+
+.result-date {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark-color);
+}
+
+.result-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.result-client,
+.result-type {
+  font-weight: 500;
+  flex: 1;
+  min-width: 150px;
+}
+
+.result-duration,
+.result-status {
+  font-size: 0.9rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.result-price {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: auto;
+  background-color: #f0f8ff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  min-width: 100px;
+  text-align: right;
+}
+
+.result-status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.result-status.paid {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: var(--secondary-color);
+}
+
+.result-status.pending {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: var(--danger-color);
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* Estilos responsivos para móvil */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .summary-cards {
+    flex-direction: column;
+  }
+  
+  .hours-summary {
+    gap: 10px;
+  }
+  
+  .result-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-actions button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  input, select, textarea, button {
+    font-size: 16px; /* Evita zoom en móviles */
+    height: 44px; /* Tamaño óptimo para tocar con el dedo */
+  }
+  
+  .entrenamiento-search h3,
+  .entrenamiento-search h4 {
+    text-align: center;
+  }
+}
+
+.mark-all-paid {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.generate-message {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+}
+
+/* Estilos para el modal de mensaje de cobro */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: var(--dark-color);
+}
+
+.modal-subtitle {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.mensaje-cobro {
+  width: 100%;
+  height: 200px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  resize: vertical;
+  white-space: pre;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .mensaje-cobro {
+    height: 150px;
+  }
+}
+
+.mark-all-paid:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .mark-all-paid {
+    padding: 12px;
+    font-size: 1rem;
+  }
+} 

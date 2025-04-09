@@ -1,0 +1,138 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.sidebar {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-content {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.add-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* Mobile Controls */
+.mobile-controls {
+  display: none;
+  width: 100%;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.btn-toggle-calendar {
+  flex: 1;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.add-btn-mobile {
+  min-width: 80px;
+}
+
+/* Calendario personalización */
+.react-calendar {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: none !important;
+  padding: 15px;
+}
+
+.react-calendar__tile {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.react-calendar__tile--active {
+  background: var(--primary-color) !important;
+  color: white;
+}
+
+.tile-content {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.paid {
+  background-color: var(--secondary-color);
+}
+
+.dot.pending {
+  background-color: var(--danger-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    flex: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .mobile-controls {
+    display: flex;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  /* Optimización para móvil */
+  input, select, textarea, button {
+    font-size: 16px; /* Evitar zoom en dispositivos móviles */
+    height: 44px; /* Tamaño ideal para tocar con el dedo */
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .form-actions button {
+    padding: 12px;
+  }
+} 

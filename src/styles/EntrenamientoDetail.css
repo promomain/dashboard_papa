@@ -1,0 +1,72 @@
+.entrenamiento-detail {
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.detail-header h3 {
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.detail-content {
+  margin-bottom: 30px;
+}
+
+.detail-group {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-group:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.detail-price {
+  font-weight: bold;
+  color: #2c3e50;
+  background-color: #f0f8ff;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.detail-group.notes {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-group.notes .detail-label {
+  margin-bottom: 8px;
+}
+
+.detail-group.notes p {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.btn-back {
+  background-color: #f5f5f5;
+  color: var(--dark-color);
+  border: 1px solid #ddd;
+} 

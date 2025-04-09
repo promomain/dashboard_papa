@@ -1,0 +1,88 @@
+.entrenamiento-list {
+  margin-top: 20px;
+}
+
+.entrenamiento-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.entrenamiento-list th,
+.entrenamiento-list td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.entrenamiento-list th {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.entrenamiento-list td.precio {
+  font-weight: bold;
+  text-align: right;
+  color: #2c3e50;
+}
+
+.arriendo-badge {
+  display: inline-block;
+  margin-left: 5px;
+  background-color: #3498db;
+  color: white;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: help;
+}
+
+.entrenamiento-list tr:hover {
+  background-color: #f8f9fa;
+}
+
+.entrenamiento-list .status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.entrenamiento-list .status.paid {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: var(--secondary-color);
+}
+
+.entrenamiento-list .status.pending {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: var(--danger-color);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: var(--transition);
+}
+
+.btn-action:hover {
+  transform: scale(1.2);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 0;
+  color: #888;
+} 
